@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Restaurante Saboroso</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Site do restaurante Saboroso desenvolvido no curso CT Desenvolvimento de Sistemas">
+    <meta name="description"
+        content="Site do restaurante Saboroso desenvolvido no curso CT Desenvolvimento de Sistemas">
     <meta name="author" content="SPProviders.com.br">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -98,11 +99,9 @@
                                 <span class="intro-text-small">Feito por
                                     <a href="#" target="_blank">SProviders.com.br</a>
                                 </span>
-                                <h1 class="cursive-font">Diga um oi!</h1>
+                                <h1 class="cursive-font">Reserve a sua Mesa!</h1>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -115,12 +114,14 @@
                         <div class="col-md-6 animate-box">
                             <h3>Entre em Contato</h3>
                             <form action="#">
+
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label class="sr-only" for="name">Nome</label>
                                         <input type="text" id="name" class="form-control" placeholder="Seu nome">
                                     </div>
                                 </div>
+
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <label class="sr-only" for="email">E-mail</label>
@@ -128,15 +129,39 @@
                                             placeholder="Seu endereco de e-mail">
                                     </div>
                                 </div>
+
                                 <div class="row form-group">
                                     <div class="col-md-12">
-                                        <label class="sr-only" for="message">Mensagem</label>
-                                        <textarea name="message" id="message" cols="30" rows="10" class="form-control"
-                                            placeholder="Escreve alguma coisa"></textarea>
+                                        <label for="inputPeople">Pessoas</label>
+                                        <select name="inputPeople" name="people" class="form-control">
+                                            <option value="">-- selecion --</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5+</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Enviar" class="btn btn-primary">
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for="inputDate">Data</label>
+                                        <input type="text" id="inputDate" name="date" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for="inputTime">Hora</label>
+                                        <input type="text" id="inputTime" name="time" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn btn-primary btn-block" value="Reservar Agora">
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -258,6 +283,6 @@
 
     <!-- Main -->
     <script src="js/main.js"></script>
+    </div>
 </body>
-
 </html>
