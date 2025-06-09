@@ -3,58 +3,72 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6 animate-box">
-                    <h3>Faça a Sua Reserva</h3>
-
-                    <form action="#">
-
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label class="sr-only" for="name">Nome</label>
-                                <input type="text" id="name" class="form-control" placeholder="Seu nome">
-                            </div>
+                    <% if (typeof error==="string" ) {%>
+                        <div class="alert alert-danger">
+                            <%= error %>
                         </div>
+                    <% } %>
 
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label class="sr-only" for="email">E-mail</label>
-                                <input type="text" id="email" class="form-control" placeholder="Seu endereco de e-mail">
-                            </div>
+                    <% if (typeof success === "string" ) {%>
+                        <div class="alert alert-success">
+                            <%= success %>
                         </div>
+                    <% } %>
+                            <h3>Faça a Sua Reserva</h3>
 
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label for="inputPeople">Pessoas</label>
-                                <select name="inputPeople" name="people" class="form-control">
-                                    <option value="">-- selecion --</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5+</option>
-                                </select>
-                            </div>
-                        </div>
+                            <form action="/reservations" method="post">
 
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label for="inputDate">Data</label>
-                                <input type="text" id="inputDate" name="date" class="form-control">
-                            </div>
-                        </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label class="sr-only" for="name">Nome</label>
+                                        <input type="text" id="name" name="name" class="form-control"
+                                            placeholder="Seu nome" value = "<%= body.name%>">
+                                    </div>
+                                </div>
 
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <label for="inputTime">Hora</label>
-                                <input type="text" id="inputTime" name="time" class="form-control">
-                            </div>
-                        </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label class="sr-only" for="email">E-mail</label>
+                                        <input type="text" id="email" name="email" class="form-control"
+                                            placeholder="Seu endereco de e-mail" value = "<%= body.email%>">
+                                    </div>
+                                </div>
 
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <input type="submit" class="btn btn-primary btn-block" value="Reservar Agora">
-                            </div>
-                        </div>
-                    </form>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for="inputPeople">Pessoas</label>
+                                        <select id="inputPeople" name="people" class="form-control">
+                                            <option value="">-- selecion --</option>
+                                            <option <% if(body.people == 1){ %>selected<%} %> value="1">1</option>
+                                            <option <% if(body.people == 2){ %>selected<%} %> value="2">2</option>
+                                            <option <% if(body.people == 3){ %>selected<%} %> value="3">3</option>
+                                            <option <% if(body.people == 4){ %>selected<%} %> value="4">4</option>
+                                            <option <% if(body.people == 5){ %>selected<%} %> value="5">5+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for="inputDate">Data</label>
+                                        <input type="text" id="inputDate" name="date" class="form-control" value = "<%= body.date%>">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for="inputTime">Hora</label>
+                                        <input type="text" id="inputTime" name="time" class="form-control" value = "<%= body.time%>">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn btn-primary btn-block" value="Reservar Agora">
+                                    </div>
+                                </div>
+                            </form>
+
                 </div>
 
                 <div class="col-md-5 col-md-push-1 animate-box">
