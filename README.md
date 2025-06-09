@@ -67,7 +67,7 @@ Este projeto não especifica uma licença em seu repositório.
 
 Você pode adicionar suas informações de contato aqui, como seu LinkedIn ou outro perfil social.
 
-  * Beatriz Costa - [Link para seu perfil do LinkedIn (opcional)]
+  * Beatriz Costa - https://www.linkedin.com/in/ana-beatriz-queiroz-costa-816147341?
   * Link do Projeto: [https://github.com/BeatrizCosta01/Restaurante.git](https://github.com/BeatrizCosta01/Restaurante.git)
 
 -----
